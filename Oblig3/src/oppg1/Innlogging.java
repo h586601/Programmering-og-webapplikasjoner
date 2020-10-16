@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
 @WebServlet(name = "Innlogging", urlPatterns = "/innlogging")
 public class Innlogging extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -41,19 +40,20 @@ public class Innlogging extends HttpServlet {
 		out.println("<title>Login</title>");
 		out.println("</head>");
 		out.println("<body>");
-		
+
 		if (invalidPasswordRedirect) {
-			out.println("    <p>Feil passord. Vennligst prøv igjen:</p>");
+			out.println("    <p>Feil passord. Vennligst prøv igjen.</p>");
 		} else if (requiresLoginRedirect) {
-			out.println("    <p>Du har vært inaktiv for lenge. Vennligst logg inn igjen</p>");
+			out.println("    <p>Du har vært inaktiv for lenge. Vennligst logg inn igjen.</p>");
 		} else {
 			out.println("    <p>Gi inn passord: </p>");
 		}
-		
+
 		out.println("<form action=\"" + "innlogging" + "\" method=\"post\">");
 		out.println("    <p><input type=\"password\" name=\"password\" /></p>");
 		out.println("    <p><input type=\"submit\" value=\"Logg inn\" /></p>");
 		out.println("</form>");
+		
 		out.println("</body>");
 		out.println("</html>");
 
@@ -67,20 +67,16 @@ public class Innlogging extends HttpServlet {
 		if (p == null || !p.equals(correctPassword)) {
 			response.sendRedirect("innlogging?invalidPassword");
 		} else {
-			HttpSession sesjon = nySesjon(request);
-			
-			sesjon.setAttribute("liste", new Liste());
+			nySesjon(request);
 
 			response.sendRedirect("handleliste");
 		}
 	}
 
-	
-	
-	public HttpSession nySesjon(HttpServletRequest request) {
+	public void nySesjon(HttpServletRequest request) {
 
-		// Første vi gjør er å gi ny ID, ved å hente den han har (om han har) ved å
-		// skrive false
+		// Første vi gjør er å gi ny ID.
+		// Henter den han har (om han har) ved å skrive false
 		HttpSession sesjon = request.getSession(false);
 
 		if (sesjon != null) {
@@ -88,6 +84,5 @@ public class Innlogging extends HttpServlet {
 		}
 		sesjon = request.getSession(true); // Generere ny
 		sesjon.setMaxInactiveInterval(intervall); // Sekunder
-		return sesjon;
 	}
 }
