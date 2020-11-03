@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Påmeldingsapp</title>
+</head>
+<body>
+<h2>Oblig4 DAT108</h2>
+<h3><i>Webapplikasjoner og JavaScript</i></h3>
+<p>Jeg har laget en applikasjon for enkel påmelding til fest.</p>
+Til info: 
+<br>For å sjekke ugyldig input på tjenersiden kan dere skrive inn 20 tegn på fornavn og etternavn, og/eller skrive 5 tegn på passordet.
+<br>Bruk feks "Langtfornavnforsjekk" til fornavn, da vil JavaScript godkjenne input (bli grønn) slik at vi kan trigge feilmelding fra tjenersiden.
+<p>Denne testingen får vi ikke gjort på telefonnummer ettersom det er krav om 8 siffer på både tjener- og klientside.</p>
+
+<form action="paamelding" method="get">
+	<input type="submit" value="Påmeldingsskjema" />
+</form>
+<form action="innlogging" method="get">
+	<p><i>Har du allerede meldt deg på?</i>
+	<br><input type="submit" value="Logg inn her" /></p>
+</form>
+</body>
+</html>
