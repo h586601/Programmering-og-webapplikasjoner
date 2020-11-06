@@ -20,10 +20,9 @@
 .formcontroller_mediumPassword {
 	/* lysegul */
 	background-color: rgb(255, 255, 170);
-
 }
 
 .formcontroller_weakPassword {
 	/* lyseraud */
-    background-color: rgb(255, 200, 200)
+    background-color: rgb(255, 200, 200);
 }

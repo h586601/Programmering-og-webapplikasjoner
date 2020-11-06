@@ -11,10 +11,18 @@ body {
     margin: 10px;
 }
 
-fieldset {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    grid-gap:10px;
+button {
+	margin-top: 15px;
+}
+
+.paamelding-input input {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid;
+}
+
+.pw-info {
+	border: 1px solid;	
 }
 
 label, .columnfirst {
@@ -34,4 +42,16 @@ div[data-info] {
 div[data-info] p {
 	margin: 0;
 	padding: 5px;
+}
+
+/* Christoffer */
+
+.pw-info {
+	display: inline-block;
+	border-radius: 50%;
+	padding: 6px;
+	margin-left: 10px;
+    width: 15px;
+    text-align: center;
+    background: #ccc;
 }
