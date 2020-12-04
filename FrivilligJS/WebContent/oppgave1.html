@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <style>
+        h1 { color: red; }
+        </style>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <title>Kvadrat til tall</title>
+    </head>
+
+    <body>
+        <h1>Kvadrat til tall</h1>
+
+        <p>Dette er et lite dokument med noe JavaScript-kode.</p>
+
+        <script>
+        "use strict";
+
+        const input = prompt("Skriv et tall")
+        const number = Number(input)
+        if (Number.isNaN(number)) {
+            console.log('Input "%s" er ikke et tall.',input)
+        } else {
+            console.log(number*number)
+        }
+        </script>
+    </body>
+</html>

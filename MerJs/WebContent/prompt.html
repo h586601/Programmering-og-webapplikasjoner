@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Use prompt method</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		"use strict"
+
+		const response = prompt("Dude, where's my car?");
+		alert(response + "\nWhere's your car, dude?")
+
+		const input1 = prompt("Enter number 1");
+		const input2 = prompt("Enter number 2");
+
+		const num1 = Number(input1);
+		const num2 = Number(input2);
+		if (Number.isNaN(num1) || (Number.isNaN(num2))) {
+			alert('Begge inputs er ikke tall.');
+		} else {
+			alert(num1 * num2);
+		}
+	</script>
+</body>
+</html>

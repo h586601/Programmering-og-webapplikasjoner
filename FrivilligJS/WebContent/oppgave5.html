@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+	function multiply(...arguments) {
+		arguments = arguments.filter(tall => Number.isInteger(tall))
+		return arguments.reduce((previous, current) => {
+			return previous*current;
+		});
+	}
+
+	console.log(multiply(2, "f", 2, 6-3))
+
+	
+</script>
+<meta charset="ISO-8859-1">
+<title>Multipliserer alle tall</title>
+</head>
+<body>
+Se i konsoll
+</body>
+</html>
