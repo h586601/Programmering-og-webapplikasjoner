@@ -25,7 +25,9 @@ public class InnloggingServlet extends HttpServlet {
 		
 		String error = request.getParameter("error");
 		
-		if()
+		if(error!=null) {
+			//Vis feilmelding i JSP
+		}
 		
 		
 		request.getRequestDispatcher("WEB-INF/logginn.jsp").forward(request, response);
@@ -38,6 +40,7 @@ public class InnloggingServlet extends HttpServlet {
 		String passord = request.getParameter("passord");
 		
 		if(passord != correctPassword) {
+			System.out.println("Feil passord " + passord);
 			response.sendRedirect("InnloggingServlet" + "?error");
 		}
 		
